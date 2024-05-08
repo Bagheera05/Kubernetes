@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: vnc-pod-1
+  namespace: vnc1   # Assigning namespace vnc to the pod
+spec:
+  containers:
+  - name: vnc-container
+    image: rafiqrock2003/ubuntu22-gui-rafik:v1
+    ports:
+    - containerPort: 5901 
+    - containerPort: 22  # VNC port
